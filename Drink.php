@@ -3,28 +3,26 @@
 
     class Drink extends Item{
 
-        private $Drink_type;
+        private $type;
 
 
-
-        
 
         /**
-         * Get the value of Drink_type
+         * Get the value of type
          */ 
-        public function getDrink_type()
+        public function getType()
         {
-                return $this->Drink_type;
+                return $this->type;
         }
 
         /**
-         * Set the value of Drink_type
+         * Set the value of type
          *
          * @return  self
          */ 
-        public function setDrink_type($Drink_type)
+        public function setType($type)
         {
-                $this->Drink_type = $Drink_type;
+                $this->type = $type;
 
                 return $this;
         }

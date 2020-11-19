@@ -3,16 +3,16 @@
 
     class Dessert extends Item{
         
-        private $Dessert_type;
+        private $type;
 
         
 
         /**
          * Get the value of Dessert_type
          */ 
-        public function getDessert_type()
+        public function getType()
         {
-                return $this->Dessert_type;
+                return $this->type;
         }
 
         /**
@@ -20,9 +20,9 @@
          *
          * @return  self
          */ 
-        public function setDessert_type($Dessert_type)
+        public function setType($type)
         {
-                $this->Dessert_type = $Dessert_type;
+                $this->type = $type;
 
                 return $this;
         }
