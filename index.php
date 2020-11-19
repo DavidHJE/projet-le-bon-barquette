@@ -1,7 +1,6 @@
 <!doctype html>
 <?php 
   require_once('connexion_bdd.php');
-  require_once('Plat.php');
 ?>
 <html lang="fr">
   <head>
