@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 19 nov. 2020 à 11:01
+-- Généré le : jeu. 19 nov. 2020 à 11:34
 -- Version du serveur :  8.0.22-0ubuntu0.20.04.2
 -- Version de PHP : 7.4.3
 
@@ -61,7 +61,8 @@ CREATE TABLE `meals` (
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `price` int NOT NULL,
-  `type` varchar(100) NOT NULL
+  `type` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `is_meal_of_the_day` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
