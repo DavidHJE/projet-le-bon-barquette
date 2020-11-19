@@ -15,8 +15,6 @@ abstract class Item{
         $this->description =$description;
     }
 
-
-
     /**
      * Get the value of name
      */ 
