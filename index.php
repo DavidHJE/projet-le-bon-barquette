@@ -16,32 +16,10 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
-      <a class="navbar-brand" href="#">Le Bon Barquette</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <?php require_once('nav.php'); ?>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Repas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Boissons</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Desserts</a>
-        </li>
-      </ul>
-
-  </div>
-    </nav>
-    <header class="container-fluid banner p-5 text-white mt-5">
+    <header class="container-fluid banner p-5 text-white">
       <h1 class="text-center font-weight-bold ">Le Bon Barquette</h1>
       <p class="m-5">Le Bon Barquette ouvert du lundi au samedi de 10h  à 23h. 
         <br/> Vous pouvez trouver des repas, des dessert et des boissons.
@@ -96,9 +74,9 @@
 
     </section>
 
-    <footer class="bg-dark text-white footer-copyright text-center py-3">
-      &copy; Copyright 2020 : Le bon barquette 
-    </footer>
+<?php 
+require_once('footer.php');
+?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -10,13 +10,135 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+  <?php
+    require_once('../nav.php');
+  ?>
 
   <div class="container">
-    <h1>Dashboard</h1>
+    <h1 class="text-center mt-2">Dashboard</h1>
+    <a href="#" type="button" class="btn btn-primary">Ajouter</a>
     
+    <h2>Les plats du jour :</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col" class="">Nom</th>
+          <th scope="col" class="">Description</th>
+          <th scope="col" class="">Prix</th>
+          <th scope="col" class="">Type</th>
+          <th scope="col" class="">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group" role="group">
+              <a href="#" type="button" class="btn btn-warning">Retiré des plat du jour</a>
+              <a href="#" type="button" class="btn btn-info">Edit</a>
+              <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
+    <hr> 
+
+    <h2>Tous les plats :</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col" class="">Nom</th>
+          <th scope="col" class="">Description</th>
+          <th scope="col" class="">Prix</th>
+          <th scope="col" class="">Type</th>
+          <th scope="col" class="">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group" role="group">
+              <a href="#" type="button" class="btn btn-success">Ajouter dans plat du jour</a>
+              <a href="#" type="button" class="btn btn-info">Edit</a>
+              <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr> 
+
+    <h2>Tous les boissons :</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col" class="">Nom</th>
+          <th scope="col" class="">Description</th>
+          <th scope="col" class="">Prix</th>
+          <th scope="col" class="">Type</th>
+          <th scope="col" class="">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group" role="group">
+              <a href="#" type="button" class="btn btn-info">Edit</a>
+              <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr> 
+
+    <h2>Tous les desserts :</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col" class="">Nom</th>
+          <th scope="col" class="">Description</th>
+          <th scope="col" class="">Prix</th>
+          <th scope="col" class="">Type</th>
+          <th scope="col" class="">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group" role="group">
+              <a href="#" type="button" class="btn btn-info">Edit</a>
+              <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
   </div>
-      
+
+  <?php
+    require_once('../footer.php');
+  ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
