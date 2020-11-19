@@ -9,10 +9,8 @@ abstract class Item{
         return $this->name."  ".$this->price."  ".$this->description."  ";
     }
 
-    public function __construct($name,$price,$description){
-        $this->name = $name;
-        $this->price = $price;
-        $this->description =$description;
+    public function __construct(){
+        
     }
 
     /**

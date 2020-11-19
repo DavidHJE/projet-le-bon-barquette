@@ -3,29 +3,11 @@
 
     class Meal extends Item{
 
-        private $Meal_type;
+        private $type;
         private $is_Meal_of_the_day;
 
 
-        /**
-         * Get the value of Meal_type
-         */ 
-        public function getMeal_type()
-        {
-                return $this->Meal_type;
-        }
-
-        /**
-         * Set the value of Meal_type
-         *
-         * @return  self
-         */ 
-        public function setMeal_type($Meal_type)
-        {
-                $this->Meal_type = $Meal_type;
-
-                return $this;
-        }
+        
 
         /**
          * Get the value of is_Meal_of_the_day
@@ -43,6 +25,26 @@
         public function setIs_Meal_of_the_day($is_Meal_of_the_day)
         {
                 $this->is_Meal_of_the_day = $is_Meal_of_the_day;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of type
+         */ 
+        public function getType()
+        {
+                return $this->type;
+        }
+
+        /**
+         * Set the value of type
+         *
+         * @return  self
+         */ 
+        public function setType($type)
+        {
+                $this->type = $type;
 
                 return $this;
         }
