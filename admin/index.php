@@ -62,14 +62,15 @@
       <tbody>
         <tr>
           <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>Nom</td>
+          <td>Descrip</td>
+          <td>15</td>
+          <td>type</td>
           <td>
             <div class="btn-group" role="group">
               <a href="#" type="button" class="btn btn-success">Ajouter dans plat du jour</a>
               <a href="#" type="button" class="btn btn-info">Edit</a>
-              <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+              <a href="delete_item.php" type="button" class="btn btn-danger">Supprimer</a>
             </div>
           </td>
         </tr>

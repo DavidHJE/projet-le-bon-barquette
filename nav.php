@@ -11,13 +11,13 @@
           <a class="nav-link text-white" href="/index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Repas</a>
+          <a class="nav-link text-white" href="/navigation/AllOurMeals.php">Repas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Boissons</a>
+          <a class="nav-link text-white" href="/navigation/AllOurDrink.php">Boissons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Desserts</a>
+          <a class="nav-link text-white" href="/navigation/AllOurdessert.php">Desserts</a>
         </li>
       </ul>
 
