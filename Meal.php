@@ -7,8 +7,6 @@
         private $is_Meal_of_the_day;
 
 
-        
-
         /**
          * Get the value of is_Meal_of_the_day
          */ 

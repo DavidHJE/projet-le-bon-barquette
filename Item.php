@@ -1,9 +1,9 @@
 <?php
 
 abstract class Item{
-    public $name;
-    private $price;
-    private $description;
+    protected $name;
+    protected $price;
+    protected $description;
 
     public function __toString(){
         return $this->name."  ".$this->price."  ".$this->description."  ";

@@ -12,6 +12,43 @@
   <body>
   <?php
     require_once('../nav.php');
+    require_once("../connexion_bdd.php");
+    require_once("../Meal.php");
+    require_once("../Drink.php");
+    require_once("../Dessert.php");
+
+    //requete pour meal of the day
+    $query = $db->prepare("select * from meals where is_meal_of_the_day = 1");
+    $query->setFetchMode(PDO::FETCH_CLASS,'Meal');
+    $query->execute();
+    
+    $meal_of_the_day = $query->fetchALL();
+
+    //requete pour meal
+
+    $queryMeal = $db->prepare("select * from meals");
+    $queryMeal->setFetchMode(PDO::FETCH_CLASS,'Meal');
+    $queryMeal->execute();
+
+    $all_meal = $queryMeal->fetchAll();
+
+    //requete pour drink
+
+    $queryDrink = $db->prepare("select * from drinks");
+    $queryDrink->setFetchMode(PDO::FETCH_CLASS,'Drink');
+    $queryDrink->execute();
+
+    $all_drink = $queryDrink->fetchAll();
+
+    //requete pour dessert
+
+    $queryDessert = $db->prepare("select * from desserts");
+    $queryDessert->setFetchMode(PDO::FETCH_CLASS,'Dessert');
+    $queryDessert->execute();
+
+    $all_Dessert = $queryDessert->fetchAll();
+    
+
   ?>
 
   <div class="container">
@@ -30,11 +67,14 @@
         </tr>
       </thead>
       <tbody>
+<?php
+  foreach($all_meal as $meals) :
+    ?>
         <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td scope="row"><?=$meals->getName() ?></td>
+          <td scope="row"><?=$meals->getDescription() ?></td>
+          <td scope="row"><?=$meals->getPrice() ?></td>
+          <td scope="row"><?=$meals->getType() ?></td>
           <td>
             <div class="btn-group" role="group">
               <a href="#" type="button" class="btn btn-warning">Retiré des plat du jour</a>
@@ -43,6 +83,9 @@
             </div>
           </td>
         </tr>
+        <?php
+endforeach;
+?>
       </tbody>
     </table>
 
@@ -51,6 +94,7 @@
     <h2>Tous les plats :</h2>
     <table class="table table-hover">
       <thead>
+      
         <tr>
           <th scope="col" class="">Nom</th>
           <th scope="col" class="">Description</th>
@@ -60,12 +104,15 @@
         </tr>
       </thead>
       <tbody>
+      <?php
+  foreach($meal_of_the_day as $meal) :
+    ?>
         <tr>
-          <th scope="row"></th>
-          <td>Nom</td>
-          <td>Descrip</td>
-          <td>15</td>
-          <td>type</td>
+        
+          <td scope="row"><?=$meal->getName() ?></td>
+          <td scope="row"><?=$meal->getDescription() ?></td>
+          <td scope="row"><?=$meal->getPrice() ?></td>
+          <td scope="row"><?=$meal->getType() ?></td>
           <td>
             <div class="btn-group" role="group">
               <a href="#" type="button" class="btn btn-success">Ajouter dans plat du jour</a>
@@ -74,6 +121,9 @@
             </div>
           </td>
         </tr>
+        <?php
+endforeach;
+?>
       </tbody>
     </table>
 
@@ -91,11 +141,15 @@
         </tr>
       </thead>
       <tbody>
+      <?php
+  foreach($all_drink as $drinks) :
+    ?>
         <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
+
+        <td scope="row"><?=$drinks->getName() ?></td>
+          <td scope="row"><?=$drinks->getDescription() ?></td>
+          <td scope="row"><?=$drinks->getPrice() ?></td>
+          <td scope="row"><?=$drinks->getType() ?></td>
           <td>
             <div class="btn-group" role="group">
               <a href="#" type="button" class="btn btn-info">Edit</a>
@@ -103,6 +157,9 @@
             </div>
           </td>
         </tr>
+        <?php
+endforeach;
+?>
       </tbody>
     </table>
 
@@ -120,11 +177,14 @@
         </tr>
       </thead>
       <tbody>
+      <?php
+  foreach($all_Dessert as $desserts) :
+    ?>
         <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
+        <td scope="row"><?=$desserts->getName() ?></td>
+          <td scope="row"><?=$desserts->getDescription() ?></td>
+          <td scope="row"><?=$desserts->getPrice() ?></td>
+          <td scope="row"><?=$desserts->getType() ?></td>
           <td>
             <div class="btn-group" role="group">
               <a href="#" type="button" class="btn btn-info">Edit</a>
@@ -132,6 +192,9 @@
             </div>
           </td>
         </tr>
+        <?php
+endforeach;
+?>
       </tbody>
     </table>
     
