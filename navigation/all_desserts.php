@@ -1,6 +1,6 @@
 <!doctype html>
 <?php 
-  require_once('connexion_bdd.php');
+  require_once("/connexion_bdd.php");
 ?>
 <html lang="fr">
   <head>
@@ -17,7 +17,7 @@
 
   <body>
 
-  <?php require_once('nav.php'); ?>
+  <?php require_once('/nav.php'); ?>
 
     <section class="container">
       <h1 class="text-center mt-2 font-weight-bold ">Tous nos desserts</h1>
@@ -68,7 +68,7 @@
     </section>
 
 <?php 
-require_once('footer.php');
+require_once('/footer.php');
 ?>
 
     <!-- Optional JavaScript -->
